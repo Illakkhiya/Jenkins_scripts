@@ -5,5 +5,6 @@ node {
 	sh "mvn clean package -q -DskipTests=true"
 	sh "mvn test"
 	archiveArtifacts 'Hello.txt'
+	build job: 'Job2', quietPeriod: 10, wait: false
     }
 }
