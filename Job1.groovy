@@ -4,5 +4,6 @@ node {
 	git branch: 'master', url: 'https://github.com/Illakkhiya/Java_maven'
 	sh "mvn clean package -q -DskipTests=true"
 	sh "mvn test"
+	archiveArtifacts 'Hello.txt'
     }
 }
